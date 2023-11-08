@@ -1,3 +1,5 @@
+from sns_app.views import base_view
+
 """
 URL configuration for sns_app project.
 
@@ -18,5 +20,6 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("", base_view, name="base_view"),
+    path("admin/", admin.site.urls),
 ]
